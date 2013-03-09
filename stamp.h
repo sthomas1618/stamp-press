@@ -1,6 +1,6 @@
 // Version 3/2011
 // File: stamp.h
-
+// Provided by Todd Gibson
 namespace stamping_press {
  void set_die(char die);
  char get_die();

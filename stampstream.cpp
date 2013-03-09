@@ -1,7 +1,3 @@
-// Stephen Thomas
-// Project 3
-// CSCI 511
-
 #include <iostream>
 #include "stampstream.h"
 #include "stampbuf.h"

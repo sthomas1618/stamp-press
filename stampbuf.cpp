@@ -1,8 +1,4 @@
-// Stephen Thomas
-// Project 3
-// CSCI 511
-
-#include <streambuf>
+include <streambuf>
 #include "stampbuf.h"
 #include "stamp.h"
 #include <stdexcept>
@@ -10,7 +6,7 @@ using namespace stamping_press;
 
 stampbuf::stampbuf(int c, int r) : max_row(r), max_col(c), cur_row(0), cur_col(0),
                                    buffer(new char[10])
-                                   
+
 {
   insert_plate(max_col, max_row);
   setp(buffer, buffer + 10);
@@ -44,7 +40,7 @@ int stampbuf::overflow(int ch)
   {
     flush_buffer(ch);
   }
-  
+
   return ch;
 }
 
@@ -73,18 +69,18 @@ void stampbuf::write_to_press(char ch)
 {
   if(cur_col < max_col)
     {
-      if(ch == ' ') 
+      if(ch == ' ')
       {
         cur_col++;
       }
       else if (ch == get_die())
-      { 
+      {
         stamp(cur_col, cur_row);
         cur_col++;
       }
       else
       {
-        try 
+        try
         {
           set_die(ch);
           stamp(cur_col, cur_row);

@@ -1,4 +1,5 @@
 // Version 3/2011
+// Provided by Todd Gibson
 #include <stdexcept>
 #include <iostream>
 #include <cctype>
